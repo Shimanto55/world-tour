@@ -8,18 +8,22 @@ const displayCountries = countries =>{
         const country = countries[i];
 
         const countryDiv =document.createElement('div');
-        // const countryName =document.createElement('h3');
-        // const countryCapital =document.createElement('p');
+        const countryName =document.createElement('h3');
+        const countryCapital =document.createElement('p');
 
-        // countryName.innerText= country.name;
-        // countryCapital.innerText= country.capital;
+        countryName.innerText= country.name;
+        countryCapital.innerText= country.capital;
 
-        // countryDiv.appendChild(countryName);
-        // countryDiv.appendChild(countryCapital);
+        countryDiv.appendChild(countryName);
+        countryDiv.appendChild(countryCapital);
 
-        const countryInfo = ' <h3> ${country.name} </h3> <p> ${country.capital} </p>'
+        // const countryInfo = ' <h3> ${country.name} </h3> <p> ${country.capital} </p>'
 
-        countryDiv.innerHTML = countryInfo;
+        // countryDiv.innerHTML = countryInfo;
+
+        countryDiv.className = 'country';
+        countryName.className= 'countryName';
+        countryCapital.className= 'countryCapital';
         countriesDiv.appendChild(countryDiv);
     }
 }
